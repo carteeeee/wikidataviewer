@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript" src="https://unpkg.com/vis-network@7.7.1/dist/vis-network.min.js"></script>
+		<title>silly thing</title>
+		<style>
+			body {
+				overflow: hidden;
+			}
+			#network {
+				width: 100vw;
+				height: 100vh;
+				position: abolsute;
+				top: 0;
+				left: 0;
+			}
+			#loading {
+				position: absolute;
+				top: 1em;
+				left: 1em;
+				z-index: 9999;
+			}
+			#settings {
+				position: absolute;
+				top: 1em;
+				left: 1em;
+			}
+			#tooltip {
+				position: absolute;
+				display: none;
+				background-color: #eee;
+				border: 1px solid #ccc;
+				padding: 5px;
+				border-radius: 5px;
+			}
+			.hidden {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="network"></div>
+		<pre id="tooltip"></pre>
+		<span id="loading"></span>
+		<div id="settings">
+		        <label for="ri">root item </label><input id="ri" name="ri" type="text"/><br/>
+			<label for="depth">scanning depth </label><input id="depth" name="depth" type="number"/><br/>
+			<label for="phys">physics? </label><input id="phys" name="phys" type="checkbox" checked/><br/>
+			<button id="go">go!</button><br/>
+		</div>
+		<script src="index.js"></script>
+	</body>
+</html>
